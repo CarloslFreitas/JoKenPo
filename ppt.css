@@ -1,0 +1,25 @@
+.texto{
+text-shadow: 0 0 3px #FF0000, 0 0 20px #FFFFFF;
+
+background-color: hsla(89, 43%, 51%, 0.3);
+
+}
+
+#Escolhas{
+	text-shadow: 0 0 3px #FF0000, 0 0 20px #FFFFFF;
+	text-align: center;
+	font-size: 30px;
+	background-color: hsla(89, 43%, 51%, 0.3);
+	font-family: Jazz LET, fantasy;
+
+
+}
+
+#GanhouPerdeuouEmpate{
+	text-shadow: 0 0 3px #FF0000, 0 0 20px #FFFFFF;
+	text-align: center;
+	font-size: 45px;
+	background-color: hsla(89, 43%, 51%, 0.3);
+	color: #000000; 
+	background-color: #00FA9A;
+	font-family: Chalkduster, fantasy;
