@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="br">
+
+<head>
+	
+	<meta Charset="UTF-8">
+	
+	<title>Pedra-Papel-Tesoura jogo</title>
+	
+	<link rel="stylesheet" type="text/css" href="ppt.css">
+
+</head>
+
+<body background="https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VGiBmTeaeilt7mgjb/video-game-background-blue_451fb1bpx__F0000.png">
+	
+<div class="texto">
+
+	<p><h3 style="text-align: center; font-family:Jazz LET, fantasy; color: #000000; background-color: #00FA9A; font-size: 30px"><div id="pontos"><span id="seuplacar">Seu Placar:  0</span>
+	</br></br><span id="placarpc">Placar PC:  0</span></div></h3></p>
+	
+	<p><h2 style="text-align: center;font-size: 40px; color: #000000">Escolha: Pedra, Papel ou Tesoura e tente derrotar o PC!</h2></p>
+	</div>
+	
+
+	<p>
+		. . . . . . . . . . . . . . . .  . . . . .  . . . . . . . . . . . . . . . . .<button onclick="pedrapapeltesoura('Pedra')"><img src="http://www.gifmania.com.br/Gif-Animados-Terror/Animacoes-Monstros/Imagens-Monstros-De-Pedra/Monstros-De-Pedra-90051.gif" height="160px" ></button> . . . . . . . . .
+		
+		
+		
+	
+		<button onclick="pedrapapeltesoura('Papel')"><img src="https://media.tenor.com/images/5afdff7779d67b8e5dc84bee364b2b0a/tenor.gif" width="160px" ></button> . . . . . . . .. 
+		 
+        
+
+        
+		<button onclick="pedrapapeltesoura('Tesoura')"><img src="http://s2.glbimg.com/Zd4rL6ip3Jwv0hYwX-xOAW7V3qk=/300x225/s.glbimg.com/jo/eg/f/original/2016/10/18/tumblr_inline_n08n7t5qpq1syhy7h.gif" width="215px"></button>
+		
+
+
+	</p>
+	
+	<p id="Escolhas"></p>
+	
+	<p id="GanhouPerdeuouEmpate"></p>
+
+	
+	<script>
+	
+
+			var seuplacar = 0;
+			var placarpc  = 0;
+			
+			function pedrapapeltesoura(Escolha) {
+				escolhadopc = ["Pedra", "Papel", "Tesoura"][Math.floor(Math.random() * 3)];
+				
+				document.getElementById("Escolhas").innerHTML = "VocÃª escolheu: " + Escolha + "</br> O PC escolheu: " + escolhadopc +"."
+
+				
+				if (Escolha == escolhadopc) {
+					document.getElementById("GanhouPerdeuouEmpate").innerHTML ="Foi Empate!";  
+				
+				}else 
+					
+					if (["PedraTesoura", "PapelPedra", "TesouraPapel"].indexOf(Escolha + escolhadopc) != -1) {
+						seuplacar++;
+						
+						document.getElementById("GanhouPerdeuouEmpate").innerHTML = "VocÃª Venceu o PC!";
+						
+						document.getElementById("seuplacar").innerHTML = "Seu Placar: " + seuplacar.toString();
+					
+					}else{
+						
+						placarpc++;
+						document.getElementById("GanhouPerdeuouEmpate").innerHTML = "O PC Venceu!";
+						
+						document.getElementById("placarpc").innerHTML = "Placar PC: " + placarpc.toString();
+
+					}
+
+				// body...
+			}
+			
+		
+	</script>
+</body>	
+</html>
